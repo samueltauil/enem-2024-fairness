@@ -29,6 +29,19 @@ Análise de **quem consegue participar** vs população geral, identificando:
 
 ---
 
+## 📋 **RELATÓRIO EXECUTIVO PRINCIPAL**
+
+> 📊 **[Acesse o Relatório Completo](docs/RELATORIO_EXECUTIVO_COMPLETO.md)** com todas as descobertas, gráficos interativos, análises estatísticas e recomendações de políticas públicas.
+
+**Destaques do Relatório:**
+- 🔍 **12 seções analíticas** cobrindo desempenho + representatividade
+- 📈 **10 gráficos referenciados** com análises visuais
+- 📊 **7 tabelas de dados** exportadas e detalhadas  
+- 🎯 **Recomendações estratégicas** para políticas educacionais
+- ⚡ **Agenda de pesquisa** para próximos passos
+
+---
+
 ## ⚡ Quick Start
 
 > 🚀 **Primeira vez?** Veja o [Guia de Início Rápido](QUICK_START.md) completo.
@@ -220,7 +233,9 @@ Todas em **alta resolução (300 DPI)** para publicações acadêmicas.
 
 **Implicações**: A análise de "fairness" está baseada em uma amostra onde **barreiras sistêmicas** já excluíram grupos vulneráveis. Equidade nas notas **não** significa equidade no acesso.
 
-📊 **Ver análise completa**: [`ANALISE_REPRESENTATIVIDADE_COMPLETA.md`](docs/ANALISE_REPRESENTATIVIDADE_COMPLETA.md)
+📊 **Ver análises completas**: 
+- [`RELATORIO_EXECUTIVO_COMPLETO.md`](docs/RELATORIO_EXECUTIVO_COMPLETO.md) - Relatório principal com todos os gráficos e descobertas
+- [`ANALISE_REPRESENTATIVIDADE_COMPLETA.md`](docs/ANALISE_REPRESENTATIVIDADE_COMPLETA.md) - Análise demográfica detalhada
 
 ---
 
@@ -254,7 +269,10 @@ Entre quem **consegue fazer** o ENEM, observamos equidade surpreendente:
 3. 📊 **"Sobreviventes educacionais"**: Quem chega ao ENEM já passou por múltiplos filtros
 4. 🎯 **Equidade aparente**: Analisar só quem participa **mascara** exclusões anteriores
 
-📄 Ver [`ANALISE_CRITICA_DISPARIDADES.md`](docs/ANALISE_CRITICA_DISPARIDADES.md) para análise detalhada.
+📄 **Documentação Técnica Completa**:
+- [`RELATORIO_EXECUTIVO_COMPLETO.md`](docs/RELATORIO_EXECUTIVO_COMPLETO.md) - **Relatório principal** com todas as descobertas, gráficos e recomendações
+- [`ANALISE_CRITICA_DISPARIDADES.md`](docs/ANALISE_CRITICA_DISPARIDADES.md) - Análise crítica das disparidades
+- [`SUMARIO_EXECUTIVO.md`](docs/SUMARIO_EXECUTIVO.md) - Resumo para tomadores de decisão
 
 ---
 
