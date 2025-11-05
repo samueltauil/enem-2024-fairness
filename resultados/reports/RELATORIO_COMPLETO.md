@@ -1,6 +1,6 @@
 # 📊 RELATÓRIO COMPLETO DE FAIRNESS - ENEM 2024
 
-**Data de Geração**: 2025-11-05 12:55:42
+**Data de Geração**: 2025-11-05 18:31:46
 
 ---
 
@@ -104,4 +104,4 @@
 ---
 
 **Código-fonte**: `analise_fairness_completa.py`  
-**Tempo de execução**: ~13.4 minutos
+**Tempo de execução**: ~13.1 minutos
