@@ -58,6 +58,39 @@ Para investigar profundamente, executamos:
 
 ---
 
+### 🚨 SUB-REPRESENTAÇÃO INDÍGENA: UMA QUESTÃO CRÍTICA
+
+#### Participação no ENEM 2024 por Raça/Cor
+
+| Raça/Cor | Participantes ENEM | % no ENEM | População Brasileira* | % População |
+|----------|-------------------|-----------|---------------------|-------------|
+| **Branca** | 911.378 | 40,06% | ~84,4 milhões | ~47,7% |
+| **Parda** | 1.007.499 | 44,29% | ~83,7 milhões | ~47,3% |
+| **Preta** | 306.522 | 13,47% | ~19,2 milhões | ~10,9% |
+| **Amarela** | 32.668 | 1,44% | ~1,1 milhão | ~0,6% |
+| **Indígena** | **16.914** | **0,74%** | **~1,7 milhão** | **~0,8%** |
+
+*Fonte: IBGE Censo 2022
+
+#### ⚠️ Questões Críticas Identificadas:
+
+1. **Acesso Geográfico**: Muitas comunidades indígenas estão em áreas remotas
+2. **Barreiras Linguísticas**: ENEM aplicado apenas em português 
+3. **Relevância Cultural**: Conteúdo pode não refletir conhecimentos tradicionais
+4. **Educação Básica**: Limitada disponibilidade de ensino médio regular
+5. **Fatores Socioeconômicos**: Custos de deslocamento e documentação
+
+#### 💡 Implicações para Políticas Públicas:
+
+- **Cotas específicas**: Política de ação afirmativa pode não estar sendo efetiva
+- **Educação diferenciada**: Necessidade de currículos adaptados
+- **Avaliação alternativa**: Reconhecimento de saberes tradicionais
+- **Apoio logístico**: Facilitar participação (transporte, hospedagem)
+
+> 📌 **Nota Metodológica**: Esta sub-representação significa que nossa análise de "fairness" está baseada em uma amostra já filtrada, onde barreiras sistêmicas impediram participação equitativa desde o início.
+
+---
+
 ### 2️⃣ Estatísticas Descritivas (Participantes Completos)
 
 | Raça/Cor | N | Média | Mediana | Desvio Padrão | Q25 | Q75 |

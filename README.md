@@ -194,6 +194,19 @@ Todas em **alta resolução (300 DPI)** para publicações acadêmicas.
 
 ---
 
+## ⚠️ Limitação Crítica: Sub-representação Indígena
+
+**IMPORTANTE**: Este estudo detectou uma **sub-representação significativa** da população indígena:
+
+| Grupo | Participação ENEM | População Brasileira |
+|-------|------------------|---------------------|
+| **Indígenas** | **0,74%** (16.914) | **~0,8%** (~1,7M) |
+| Demais grupos | Representação proporcional | - |
+
+**Implicações**: A análise de "fairness" está baseada em uma amostra onde **barreiras sistêmicas** já excluíram grupos vulneráveis. Equidade nas notas **não** significa equidade no acesso.
+
+---
+
 ## 🎯 Principais Achados
 
 ### Equidade Excepcional (Surpreendente!)
