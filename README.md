@@ -21,6 +21,8 @@ Avaliar equidade e fairness no ENEM 2024 através de métricas quantitativas par
 
 ## ⚡ Quick Start
 
+> 🚀 **Primeira vez?** Veja o [Guia de Início Rápido](QUICK_START.md) completo.
+
 ```bash
 # 1. Clone o repositório
 git clone https://github.com/SEU_USUARIO/enem-2024-fairness.git
