@@ -1,13 +1,12 @@
 # ============================================================================
 # DADOS (NÃO VERSIONAR - Arquivos muito grandes)
 # ============================================================================
-dados/DADOS/*.csv
-dados/DADOS/*.txt
-dados/LEIA-ME E DOCUMENTOS TÉCNICOS/*
+# Ignorar todo o conteúdo do diretório dados
+dados/*
 
-# Manter estrutura de pastas
-!dados/DADOS/.gitkeep
-!dados/LEIA-ME E DOCUMENTOS TÉCNICOS/.gitkeep
+# Manter apenas arquivos .gitkeep para preservar estrutura
+!dados/.gitkeep
+!dados/**/.gitkeep
 
 # ============================================================================
 # PYTHON
