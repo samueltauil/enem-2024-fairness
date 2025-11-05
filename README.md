@@ -65,11 +65,12 @@ pip install requests tqdm
 python download_dados.py
 ```
 
-Este script irá:
-- ✅ Baixar automaticamente do servidor INEP (~2.5 GB)
-- ✅ Extrair apenas os CSVs necessários
+Este script irá **criar automaticamente** a estrutura completa:
+- ✅ Baixar microdados do servidor INEP (~2.5 GB)
+- ✅ Criar diretório `dados/` com todas as subpastas
+- ✅ Extrair CSVs, dicionários, provas e documentação
 - ✅ Verificar integridade dos arquivos
-- ✅ Remover ZIP para economizar espaço (opcional)
+- ✅ Limpar arquivos temporários
 
 **Tempo estimado**: 10-20 minutos (depende da conexão)
 
@@ -79,10 +80,7 @@ Este script irá:
 
 1. Acesse: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem
 2. Baixe os **Microdados do ENEM 2024** (arquivo ZIP)
-3. Extraia os seguintes arquivos para `dados/DADOS/`:
-   - `PARTICIPANTES_2024.csv` (440 MB)
-   - `RESULTADOS_2024.csv` (1.6 GB)
-   - `ITENS_PROVA_2024.csv` (opcional)
+3. Extraia manualmente criando estrutura: `dados/DADOS/`, `dados/DICIONÁRIO/`, etc.
 
 ### 3. Executar Análise Completa
 
@@ -97,25 +95,39 @@ python analise_fairness_completa.py
 
 ## 📁 Estrutura do Projeto
 
+### Versionado (Repositório)
 ```
 enem-2024-fairness/
-├── analise_fairness_completa.py       # 🆕 Script principal otimizado
-├── dados/
-│   └── DADOS/
-│       ├── .gitkeep                   # Manter estrutura (dados não versionados)
-│       ├── PARTICIPANTES_2024.csv     # ⚠️ Baixar do INEP (440 MB)
-│       └── RESULTADOS_2024.csv        # ⚠️ Baixar do INEP (1.6 GB)
-├── docs/                              # 📚 Documentação técnica
+├── 📜 analise_fairness_completa.py    # Script principal de análise
+├── 🔽 download_dados.py               # Download automático dos dados
+├── 📋 requirements.txt                # Dependências Python
+├── 📚 docs/                           # Documentação técnica
 │   ├── ANALISE_CRITICA_DISPARIDADES.md
 │   ├── SUMARIO_EXECUTIVO.md
 │   └── RELATORIO_FAIRNESS_ENEM_2024.md
-├── resultados/
-│   ├── graficos/                      # 🖼️ 10 visualizações PNG (300 DPI)
-│   ├── tabelas/                       # 📋 7 arquivos CSV
-│   ├── reports/                       # 📄 Relatório automatizado
-│   └── arquivo_analises_antigas/      # 🗄️ Scripts legados (backup)
-└── README.md
+├── 🔧 TROUBLESHOOTING.md
+├── 🤝 CONTRIBUTING.md
+└── 📄 README.md
 ```
+
+### Gerado Automaticamente (Não versionado)
+```
+📁 dados/                              # Criado por download_dados.py
+├── DADOS/                             # CSVs principais (2+ GB)
+├── DICIONÁRIO/                        # Metadados e esquemas
+├── INPUTS/                            # Scripts R, SAS, SPSS
+├── PROVAS E GABARITOS/                # PDFs das provas
+└── LEIA-ME E DOCUMENTOS TÉCNICOS/     # Documentação oficial
+
+📁 downloads/                          # Arquivos temporários de download
+
+📁 resultados/                         # Gerado por analise_fairness_completa.py
+├── graficos/                          # Visualizações PNG (300 DPI)
+├── tabelas/                           # Análises CSV
+└── reports/                           # Relatórios markdown
+```
+
+> 🚨 **Importante**: Diretórios `dados/`, `downloads/` e `resultados/` são **automaticamente criados** pelos scripts. Não é necessário criá-los manualmente.
 
 ---
 
@@ -234,7 +246,7 @@ A equidade observada pode refletir:
 
 ### Dados
 - [INEP - Microdados ENEM](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem)
-- [Dicionário de Dados ENEM 2024](dados/DICIONÁRIO/)
+- Dicionário de Dados: Disponível após executar `python download_dados.py`
 
 ### Conceitos de Fairness
 - **80% Rule**: EEOC Uniform Guidelines on Employee Selection Procedures

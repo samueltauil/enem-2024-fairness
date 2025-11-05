@@ -1,12 +1,18 @@
 # ============================================================================
-# DADOS (NÃO VERSIONAR - Arquivos muito grandes)
+# DADOS E ARTEFATOS GERADOS (NÃO VERSIONAR)
 # ============================================================================
-# Ignorar todo o conteúdo do diretório dados
-dados/*
+# Diretório dados é criado automaticamente pelo script download_dados.py
+# Contém arquivos grandes (2+ GB) que não devem ser versionados
+dados/
 
-# Manter apenas arquivos .gitkeep para preservar estrutura
-!dados/.gitkeep
-!dados/**/.gitkeep
+# Downloads temporários
+downloads/
+
+# Resultados podem ser regenerados executando os scripts
+resultados/graficos/*.png
+resultados/graficos/*.jpg
+resultados/tabelas/*.csv
+resultados/reports/*.md
 
 # ============================================================================
 # PYTHON

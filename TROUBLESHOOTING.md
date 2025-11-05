@@ -1,5 +1,25 @@
 # 🔧 Solução de Problemas - Download de Dados
 
+## ℹ️ Informações Importantes
+
+### 📁 Estrutura de Diretórios Automática
+
+O projeto utiliza uma abordagem **"repositório limpo"**:
+
+- ✅ **Versionado**: Apenas código-fonte, documentação e configuração
+- ❌ **Não versionado**: Dados, resultados e arquivos temporários
+
+**Os diretórios `dados/`, `downloads/` e `resultados/` são criados automaticamente pelos scripts.**
+
+Se você clonou o repositório e não vê estes diretórios, é **normal**! Execute:
+
+```bash
+python download_dados.py  # Cria dados/ com todos os subdiretorios
+python analise_fairness_completa.py  # Cria resultados/
+```
+
+---
+
 ## ❌ Problemas Comuns e Soluções
 
 ### 1. Erro: "URL do INEP não acessível"
