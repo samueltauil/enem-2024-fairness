@@ -89,6 +89,8 @@ Para investigar profundamente, executamos:
 
 > 📌 **Nota Metodológica**: Esta sub-representação significa que nossa análise de "fairness" está baseada em uma amostra já filtrada, onde barreiras sistêmicas impediram participação equitativa desde o início.
 
+> 📊 **Análise Completa**: Ver [`ANALISE_REPRESENTATIVIDADE_COMPLETA.md`](ANALISE_REPRESENTATIVIDADE_COMPLETA.md) para análise detalhada de **todos os grupos demográficos** (gênero, região, raça/cor, interseccionalidade).
+
 ---
 
 ### 2️⃣ Estatísticas Descritivas (Participantes Completos)

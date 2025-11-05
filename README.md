@@ -105,6 +105,7 @@ enem-2024-fairness/
 ├── 📋 requirements.txt                # Dependências Python
 ├── 📚 docs/                           # Documentação técnica
 │   ├── ANALISE_CRITICA_DISPARIDADES.md
+│   ├── ANALISE_REPRESENTATIVIDADE_COMPLETA.md
 │   ├── SUMARIO_EXECUTIVO.md
 │   └── RELATORIO_FAIRNESS_ENEM_2024.md
 ├── 🔧 TROUBLESHOOTING.md
@@ -194,16 +195,22 @@ Todas em **alta resolução (300 DPI)** para publicações acadêmicas.
 
 ---
 
-## ⚠️ Limitação Crítica: Sub-representação Indígena
+## ⚠️ Questões Críticas de Representatividade
 
-**IMPORTANTE**: Este estudo detectou uma **sub-representação significativa** da população indígena:
+**IMPORTANTE**: Este estudo identificou **desigualdades significativas** na participação:
 
-| Grupo | Participação ENEM | População Brasileira |
-|-------|------------------|---------------------|
-| **Indígenas** | **0,74%** (16.914) | **~0,8%** (~1,7M) |
-| Demais grupos | Representação proporcional | - |
+### 🚨 Grupos Sub-representados:
+- **Indígenas**: 0,74% (vs ~0,8% população) - Barreiras sistêmicas críticas
+- **Homens**: 40,4% (vs ~49% população) - Gap educacional masculino  
+- **Sudeste**: 32,7% (vs ~41,8% população) - Possível migração para ensino privado
+
+### 📈 Grupos Sobre-representados:
+- **Mulheres**: 59,6% (vs ~51% população) - Feminização do ensino superior
+- **Nordeste**: 35,1% (vs ~27,2% população) - Efeito de políticas educacionais
 
 **Implicações**: A análise de "fairness" está baseada em uma amostra onde **barreiras sistêmicas** já excluíram grupos vulneráveis. Equidade nas notas **não** significa equidade no acesso.
+
+📊 **Ver análise completa**: [`ANALISE_REPRESENTATIVIDADE_COMPLETA.md`](docs/ANALISE_REPRESENTATIVIDADE_COMPLETA.md)
 
 ---
 
