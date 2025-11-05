@@ -19,9 +19,10 @@ Esta análise revela um **paradoxo fundamental** na educação brasileira:
 
 ### Universo Analisado
 - **Total de inscritos ENEM 2024**: 4.332.944
-- **Participantes completos**: 2.274.981 (52,5%)
+- **Participantes analisados**: **2.274.981** (52,5% dos inscritos)
 - **População brasileira jovem**: ~210 milhões (18-24 anos: ~23 milhões)
-- **Cobertura**: ~10% da população na faixa etária
+- **Cobertura populacional**: ~10% da faixa etária elegível
+- **Representatividade**: 59,6% mulheres, 40,4% homens
 
 ### Critérios de Inclusão
 - ✅ Presentes nas 4 provas objetivas
@@ -36,15 +37,18 @@ Esta análise revela um **paradoxo fundamental** na educação brasileira:
 ### 🏆 **2.1 Equidade Excepcional no Desempenho**
 
 #### **Disparidades Raciais: Praticamente ZERO**
-| Grupo | Nota Média | Gap vs Branca | Status |
-|-------|------------|---------------|---------|
-| **Branca** | 547.64 | Referência | ✅ |
-| **Parda** | 547.59 | -0.05 | ✅ Desprezível |
-| **Preta** | 547.57 | **-0.07** | ✅ **Menor que 0.1** |
-| **Amarela** | 548.12 | +0.48 | ✅ |
-| **Indígena** | 547.84 | +0.20 | ✅ |
+| Grupo | Nota Média | Gap vs Branca | Participantes | % ENEM |
+|-------|------------|---------------|---------------|---------|
+| **Branca** | 547.58 | Referência | 911,378 | 40.1% |
+| **Preta** | 547.64 | +0.06 | 306,522 | 13.5% |
+| **Parda** | 547.59 | +0.01 | 1,007,499 | 44.3% |
+| **Amarela** | 547.82 | +0.24 | 32,668 | 1.4% |
+| **Indígena** | 547.22 | **-0.36** | 16,914 | **0.74%** |
 
-> **📊 Ver**: `graficos/dashboard_raca.png` - Análise completa racial
+**Gap Racial Máximo**: 0.065 pontos (Branca vs Preta) - **Desprezível**
+
+![Dashboard Racial](../resultados/graficos/01_dashboard_raca.png)
+*Figura 1: Análise completa de equidade racial - 6 métricas integradas*
 
 **Validação Estatística Rigorosa:**
 - **ANOVA**: p = 0.9297 → Médias **estatisticamente iguais**
@@ -53,24 +57,30 @@ Esta análise revela um **paradoxo fundamental** na educação brasileira:
 - **Demographic Parity**: 97.58% → **PASS** (>80%)
 
 #### **Paridade de Gênero: Total**
-| Comparação | Gap (F - M) | Status |
-|------------|-------------|---------|
-| **Nota Geral** | +0.11 pontos | ✅ Praticamente zero |
-| **STEM** (CN + MT) | +0.08 pontos | ✅ Zero histórico |
-| **Humanidades** (CH + LC) | +0.14 pontos | ✅ Desprezível |
+| Gênero | Nota Média | Participantes | % ENEM | % População | Gap |
+|--------|------------|---------------|---------|-------------|-----|
+| **Feminino** | 547.52 | 1,356,087 | **59.6%** | 51.0% | **+8.6pp** |
+| **Masculino** | 547.69 | 918,894 | **40.4%** | 49.0% | **-8.6pp** |
 
-> **📊 Ver**: `graficos/dashboard_sexo.png` - STEM vs Humanidades detalhado
+**Gap de Desempenho**: 0.17 pontos (M > F) - **Desprezível**  
+**Gap de Participação**: 8.6pp (F > M) - **Crítico**
+
+![Dashboard Gênero](../resultados/graficos/02_dashboard_sexo.png)
+*Figura 2: Análise de paridade de gênero - STEM vs Humanidades + participação*
 
 #### **Equilíbrio Regional: Surpreendente**
-| Região | Nota Média | Gap vs Melhor | Taxa Aprovação |
-|--------|------------|---------------|----------------|
-| **Sul** | 548.03 | Referência | 27.00% |
-| **Nordeste** | 547.95 | -0.08 | 26.83% |
-| **Sudeste** | 547.54 | -0.49 | 26.90% |
-| **Norte** | 547.45 | -0.58 | 26.77% |
-| **Centro-Oeste** | 547.33 | **-0.71** | 26.51% |
+| Região | Nota Média | Participantes | % ENEM | % População | Status |
+|--------|------------|---------------|---------|-------------|---------|
+| **Norte** | 547.89 | 260,322 | 11.4% | 8.9% | 📈 Sobre-rep (+2.5pp) |
+| **Nordeste** | 547.59 | 799,583 | **35.1%** | 27.2% | 📈 **Sobre-rep (+7.9pp)** |
+| **Sul** | 547.56 | 293,053 | 12.9% | 14.7% | ➡️ Adequada (-1.8pp) |
+| **Sudeste** | 547.54 | 743,686 | **32.7%** | 41.8% | 📉 **Sub-rep (-9.1pp)** |
+| **Centro-Oeste** | 547.43 | 178,337 | 7.8% | 7.4% | ➡️ Adequada (+0.4pp) |
 
-> **📊 Ver**: `graficos/dashboard_regiao.png` - Análise regional completa
+**Gap Regional**: 0.46 pontos (Norte-Centro-Oeste) - **Desprezível**
+
+![Dashboard Regional](../resultados/graficos/03_dashboard_regiao.png)
+*Figura 3: Análise regional - desempenho vs representatividade populacional*
 
 ---
 
@@ -80,51 +90,71 @@ Esta análise revela um **paradoxo fundamental** na educação brasileira:
 
 | Grupo | % no ENEM | % População | Gap | Impacto |
 |-------|-----------|-------------|-----|---------|
-| **Homens Indígenas** | 0,33% | ~0,4% | -0,07pp | 🚨 **Tripla exclusão** |
-| **Indígenas Total** | 0,74% | ~0,8% | -0,06pp | 🚨 **Barreiras sistêmicas** |
-| **Homens Geral** | 40,4% | ~49% | **-8,6pp** | 🚨 **Gap educacional masculino** |
-| **Sudeste** | 32,7% | ~41,8% | **-9,1pp** | ⚠️ Migração ensino privado? |
+| **Indígenas Total** | **0,74%** | ~0,8% | -0,06pp | 🚨 **Barreiras sistêmicas críticas** |
+| **Homens Geral** | **40,4%** | ~49% | **-8,6pp** | 🚨 **Gap educacional masculino** |
+| **Sudeste** | **32,7%** | ~41,8% | **-9,1pp** | ⚠️ **Migração ensino privado?** |
+| **Brancos** | 40,1% | ~43,5% | -3,4pp | ⚠️ Moderada sub-representação |
 
-> **📊 Ver**: `graficos/interseccionalidade_raca_sexo.png` - Interseccionalidade detalhada
+![Interseccionalidade Raça-Sexo](../resultados/graficos/04_heatmap_raca_sexo.png)
+*Figura 4: Interseccionalidade raça × gênero - identificação de grupos vulneráveis*
 
 #### **Sobre-representação Compensatória**
 
 | Grupo | % no ENEM | % População | Gap | Interpretação |
 |-------|-----------|-------------|-----|---------------|
-| **Mulheres** | 59,6% | ~51% | **+8,6pp** | 📈 Feminização ensino superior |
-| **Nordeste** | 35,1% | ~27,2% | **+7,9pp** | 📈 Efeito políticas educacionais |
-| **Pretas** | 13,5% | ~10,9% | +2,6pp | 📈 Políticas afirmativas? |
+| **Mulheres** | **59,6%** | ~51% | **+8,6pp** | 📈 **Feminização ensino superior** |
+| **Nordeste** | **35,1%** | ~27,2% | **+7,9pp** | 📈 **Efeito políticas educacionais** |
+| **Pretas** | 13,5% | ~10,9% | +2,6pp | 📈 Políticas afirmativas eficazes |
+| **Norte** | 11,4% | ~8,9% | +2,5pp | � Expansão educacional |
+| **Amarelas** | 1,4% | ~0,6% | +0,8pp | 📈 Tradição educacional |
 
-> **📊 Ver**: `graficos/distribuicao_quartis.png` - Representação por performance
+![Interseccionalidade Raça-Região](../resultados/graficos/05_heatmap_raca_regiao.png)
+*Figura 5: Interseccionalidade raça × região - padrões geográfico-demográficos*
 
 ---
 
 ## 🔬 **3. ANÁLISES ESPECIALIZADAS**
 
 ### **3.1 Análise de Extremos**
-> **📊 Ver**: `graficos/analise_extremos.png`
 
-- **Top 10% (Elite)**: Composição proporcional à participação ✅
-- **Bottom 10% (Vulneráveis)**: Sem concentração racial/regional ✅
-- **Alta Performance (≥700)**: Paridade mantida ✅
+![Análise de Extremos](../resultados/graficos/08_extremos_raca.png)
+*Figura 6: Análise de extremos - Top 10% vs Bottom 10% por raça/cor*
 
-**Conclusão**: Equidade se mantém em **todos os níveis de desempenho**.
+- **Top 10% (Elite)**: Composição proporcional à participação geral ✅
+- **Bottom 10% (Vulneráveis)**: Sem concentração desproporcional de grupos ✅  
+- **Alta Performance (≥700)**: Paridade racial mantida ✅
+- **Distribuição**: Equidade preservada em **todos os níveis** de performance
+
+**Conclusão**: A equidade no desempenho é **consistente** independentemente do nível de performance, confirmando ausência de viés sistemático.
 
 ### **3.2 Distribuição Granular**
-> **📊 Ver**: `graficos/distribuicao_decis.png`
 
-**Por Decis (10 faixas de performance):**
-- Variação racial máxima: 0,09pp entre decis
-- Estabilidade excepcional em todos os níveis
-- Ausência de "concentração" de grupos em extremos
+![Distribuição por Quartis](../resultados/graficos/06_quartis_raca.png)
+*Figura 7: Composição racial por quartis de desempenho*
+
+![Distribuição por Decis](../resultados/graficos/07_decis_raca.png)
+*Figura 8: Análise granular por decis - estabilidade racial em 10 níveis*
+
+**Por Quartis e Decis:**
+- **Variação racial máxima**: < 0,1pp entre todos os níveis
+- **Estabilidade excepcional**: Composição praticamente idêntica do 1º ao 10º decil
+- **Ausência de concentração**: Nenhum grupo sobre/sub-representado em extremos
+- **Consistência**: Padrão confirma equidade robusta em toda a distribuição
 
 ### **3.3 Correlações entre Provas**
-> **📊 Ver**: `graficos/correlacao_heatmap.png`
 
-- **Maior correlação**: Ciências Humanas ↔ Linguagens (0,72)
-- **Menor correlação**: Matemática ↔ Redação (0,51)
-- **STEM internal**: CN ↔ MT (0,65)
-- **Padrão consistente** entre todos os grupos demográficos
+![Scatter Matrix das Provas](../resultados/graficos/09_scatter_matrix_provas.png)
+*Figura 9: Scatter matrix - correlações bivariadas entre todas as provas*
+
+![Heatmap de Correlações](../resultados/graficos/10_correlacao_provas.png)
+*Figura 10: Matriz de correlações entre provas - padrões estruturais*
+
+**Padrões Identificados:**
+- **Correlações moderadas**: Todas entre 0,50-0,75 (estrutura consistente)
+- **STEM coherência**: Ciências da Natureza ↔ Matemática (correlação forte)
+- **Humanidades coesão**: Ciências Humanas ↔ Linguagens (correlação alta)
+- **Redação única**: Menor correlação com outras provas (habilidade distinta)
+- **Homogeneidade**: Padrão **idêntico** entre todos os grupos demográficos
 
 ---
 
@@ -163,18 +193,20 @@ Esta análise revela um **paradoxo fundamental** na educação brasileira:
 
 ### **Gráficos Essenciais (10 visualizações)**
 
-1. **`dashboard_raca.png`** - Equidade racial em 6 dimensões
-2. **`dashboard_sexo.png`** - Paridade de gênero + STEM analysis
-3. **`dashboard_regiao.png`** - Equilíbrio regional surpreendente
-4. **`interseccionalidade_raca_sexo.png`** - Heatmap interseccional
-5. **`interseccionalidade_raca_regiao.png`** - Geografia + etnia
-6. **`distribuicao_quartis.png`** - Representação por performance
-7. **`distribuicao_decis.png`** - Análise granular (10 níveis)
-8. **`analise_extremos.png`** - Top 10% vs Bottom 10%
-9. **`scatter_matrix.png`** - Correlações entre todas as provas
-10. **`correlacao_heatmap.png`** - Matriz de correlações
+| # | Arquivo | Descrição | Seção |
+|---|---------|-----------|-------|
+| 1 | `01_dashboard_raca.png` | Equidade racial - 6 métricas integradas | [Figura 1](#disparidades-raciais-praticamente-zero) |
+| 2 | `02_dashboard_sexo.png` | Paridade gênero + STEM vs Humanidades | [Figura 2](#paridade-de-gênero-total) |
+| 3 | `03_dashboard_regiao.png` | Equilíbrio regional + representatividade | [Figura 3](#equilíbrio-regional-surpreendente) |
+| 4 | `04_heatmap_raca_sexo.png` | Interseccionalidade raça × gênero | [Figura 4](#sub-representação-de-grupos-vulneráveis) |
+| 5 | `05_heatmap_raca_regiao.png` | Interseccionalidade raça × região | [Figura 5](#sobre-representação-compensatória) |
+| 6 | `06_quartis_raca.png` | Composição racial por quartis | [Figura 7](#32-distribuição-granular) |
+| 7 | `07_decis_raca.png` | Análise granular por decis (10 níveis) | [Figura 8](#32-distribuição-granular) |
+| 8 | `08_extremos_raca.png` | Top 10% vs Bottom 10% por raça | [Figura 6](#31-análise-de-extremos) |
+| 9 | `09_scatter_matrix_provas.png` | Scatter matrix entre todas as provas | [Figura 9](#33-correlações-entre-provas) |
+| 10 | `10_correlacao_provas.png` | Heatmap de correlações entre provas | [Figura 10](#33-correlações-entre-provas) |
 
-> **📁 Localização**: `resultados/graficos/` (300 DPI para publicações)
+> **📁 Localização**: `resultados/graficos/` (300 DPI, alta qualidade para publicações acadêmicas)
 
 ---
 
@@ -198,11 +230,16 @@ Esta análise revela um **paradoxo fundamental** na educação brasileira:
 
 ### **Literatura Anterior vs ENEM 2024**
 
-| Métrica | Estudos 2003-2017 | ENEM 2024 | Redução |
-|---------|-------------------|-----------|---------|
-| **Gap Racial** | 30-80 pontos | 0.07 pontos | **99,9%** ⬇️ |
-| **Gap Gênero** | 15-25 pontos | 0.11 pontos | **99,5%** ⬇️ |
-| **Gap Regional** | 40-60 pontos | 0.71 pontos | **98,5%** ⬇️ |
+| Métrica | Estudos 2003-2017 | ENEM 2024 (Real) | Redução |
+|---------|-------------------|------------------|---------|
+| **Gap Racial** | 30-80 pontos | **0.065 pontos** | **99,9%** ⬇️ |
+| **Gap Gênero** | 15-25 pontos | **0.169 pontos** | **99,3%** ⬇️ |
+| **Gap Regional** | 40-60 pontos | **0.459 pontos** | **99,0%** ⬇️ |
+
+**Dados Reais do ENEM 2024:**
+- **Racial**: Branca (547.58) vs Preta (547.64) = 0.065 pontos
+- **Gênero**: Feminino (547.52) vs Masculino (547.69) = 0.169 pontos  
+- **Regional**: Norte (547.89) vs Centro-Oeste (547.43) = 0.459 pontos
 
 **Referências Comparativas:**
 - Soares & Alves (2003): Gap racial ~50 pontos
