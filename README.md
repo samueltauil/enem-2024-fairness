@@ -5,17 +5,27 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Data Source: INEP](https://img.shields.io/badge/Data-INEP%202024-red.svg)](https://www.gov.br/inep/)
 
-Análise completa de disparidades no desempenho do ENEM 2024 usando **Fairlearn** (Microsoft Research).
+Análise completa de **equidade educacional** no ENEM 2024 usando **Fairlearn** (Microsoft Research), investigando tanto **disparidades no desempenho** quanto **barreiras no acesso**.
 
-> **Achado Principal**: Equidade excepcional detectada — gaps raciais de apenas **0.07 pontos** (99% menor que literatura anterior), sugerindo sucesso metodológico do INEP ou viés de seleção anterior ao exame.
+> **⚠️ Achado Paradoxal**: Detectamos **equidade excepcional** nas notas (gaps < 0.1) combinada com **desigualdades críticas** na participação — revelando que **barreiras sistêmicas** operam **antes** do exame, excluindo grupos vulneráveis da análise.
 
 ## 🎯 Objetivo
 
-Avaliar equidade e fairness no ENEM 2024 através de métricas quantitativas para identificar possíveis disparidades entre:
-- **Raça/Cor**: Branca, Preta, Parda, Amarela, Indígena
+**Análise dupla de equidade educacional** no ENEM 2024:
+
+### 🔍 1. Equidade no Desempenho (Fairness)
+Métricas quantitativas para identificar disparidades nas **notas** entre grupos que **conseguiram** fazer o exame:
+- **Raça/Cor**: Branca, Preta, Parda, Amarela, Indígena  
 - **Sexo**: Masculino, Feminino
 - **Região**: Norte, Nordeste, Sul, Sudeste, Centro-Oeste
 - **Interseccionalidade**: Combinações de atributos sensíveis
+
+### 🚨 2. Equidade no Acesso (Representatividade)
+Análise de **quem consegue participar** vs população geral, identificando:
+- **Sub-representação crítica**: Indígenas (0,74% vs 0,8% população)
+- **Gap de gênero educacional**: Homens (40,4% vs 49% população)  
+- **Disparidades regionais**: Sudeste sub-representado (-9,1pp)
+- **Barreiras sistêmicas** que operam antes da avaliação
 
 ---
 
@@ -216,22 +226,33 @@ Todas em **alta resolução (300 DPI)** para publicações acadêmicas.
 
 ## 🎯 Principais Achados
 
-### Equidade Excepcional (Surpreendente!)
+### 🏆 Equidade Excepcional no Desempenho (Paradoxo!)
 
-Contrariando expectativas e literatura anterior, o ENEM 2024 apresenta:
+Entre quem **consegue fazer** o ENEM, observamos equidade surpreendente:
 
 - **Gap racial**: ~0.07 pontos (99% menor que estudos anteriores)
-- **Gap de gênero**: ~0.11 pontos (praticamente nulo)
+- **Gap de gênero**: ~0.11 pontos (praticamente nulo)  
 - **Gap regional**: ~0.71 pontos (98% menor que histórico)
 - **Demographic Parity**: ✅ PASS (razão > 0.97)
 - **80% Rule**: ✅ PASS em todas as métricas
 
-### Interpretação Crítica
+### 🚨 Desigualdades Críticas no Acesso
 
-A equidade observada pode refletir:
-1. ✅ **Sucesso metodológico** do INEP (TRI sem viés, calibração rigorosa)
-2. ✅ **Políticas educacionais efetivas** (universalização, qualidade)
-3. ⚠️ **Viés de seleção anterior** (disparidades no acesso à educação básica)
+**Mas** a análise de representatividade revela exclusões sistêmicas:
+
+- **Indígenas**: 0,74% participação (vs 0,8% população) - **Barreiras críticas**
+- **Homens**: 40,4% participação (vs 49% população) - **Gap educacional masculino**  
+- **Sudeste**: 32,7% participação (vs 41,8% população) - **Migração para ensino privado?**
+- **Interseccionalidade**: Homens indígenas apenas 0,3% dos participantes
+
+### 🔍 Interpretação do Paradoxo
+
+**Por que notas igualitárias + participação desigual?**
+
+1. ✅ **Metodologia TRI eficaz** do INEP (sem viés de item)
+2. ⚠️ **Seleção prévia crítica**: Barreiras sistêmicas **excluem** grupos vulneráveis **antes** do exame
+3. 📊 **"Sobreviventes educacionais"**: Quem chega ao ENEM já passou por múltiplos filtros
+4. 🎯 **Equidade aparente**: Analisar só quem participa **mascara** exclusões anteriores
 
 📄 Ver [`ANALISE_CRITICA_DISPARIDADES.md`](docs/ANALISE_CRITICA_DISPARIDADES.md) para análise detalhada.
 
