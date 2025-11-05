@@ -213,7 +213,7 @@ A equidade observada pode refletir:
 2. ✅ **Políticas educacionais efetivas** (universalização, qualidade)
 3. ⚠️ **Viés de seleção anterior** (disparidades no acesso à educação básica)
 
-📄 Ver [`ANALISE_CRITICA_DISPARIDADES.md`](resultados/ANALISE_CRITICA_DISPARIDADES.md) para análise detalhada.
+📄 Ver [`ANALISE_CRITICA_DISPARIDADES.md`](docs/ANALISE_CRITICA_DISPARIDADES.md) para análise detalhada.
 
 ---
 
